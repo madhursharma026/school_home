@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Tailwindcss School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+</head>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    navbarBG: 'white',
+                    navbarText: 'black',
+                    green: '#08A842'
+                },
+            }
+        }
+    }
+</script>
+
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .bgImage {
+        height: 0;
+        width: 100%;
+    }
+
+    .openPositionBtn {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        font-size: 16px;
+    }
+
+    .openPositionBtn:hover {
+        background: white;
+        border: 2px solid white;
+        color: #08A842;
+    }
+
+    .salesBtn {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        font-size: 16px;
+    }
+
+    .salesBtn:hover {
+        background: white;
+        border: 2px solid white;
+        color: #08A842;
+    }
+
+    .faqsHoverEffect:hover {
+        color: #08A842;
+    }
+
+    @media (max-width: 576px) {
+        .salesBtn:hover {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+        }
+
+        .openPositionBtn:hover {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+        }
+
+        .curveImg {
+            margin-top: -200px;
+        }
+
+        .faqsHoverEffect:hover {
+            color: black;
+        }
+    }
+
+    .container {
+        position: relative;
+        color: white;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
+</style>
+
+<script>
+    window.onload = function () {
+        document.getElementById("header").style.position = "fixed";
+        document.getElementById("header").style.marginTop = "0";
+    }
+
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 100) {
+            document.getElementById("header").style.position = "relative";
+            document.getElementById("header").style.transition = "top 0.4s ease-out";
+            document.getElementById("header").style.marginTop = "-76px";
+        } else {
+            document.getElementById("header").style.position = "fixed";
+            document.getElementById("header").style.transition = "top 0.4s ease-out";
+            document.getElementById("header").style.marginTop = "0";
+        }
+    }
+</script>
+
+<body>
+    <div id="header" style="z-index: 1000;">
+        <div class="w-screen">
+            <nav class="flex items-center justify-between flex-wrap bg-navbarBG p-3 lg:flex hidden">
+                <div class="flex items-center flex-shrink-0 text-white mr-6 ml-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuMdkg5uExhqnoTkIS1Tznf93WP0P2crfIJkN32wcmDDNWr6Is9eePJqtjBPinWwfH_c&usqp=CAU"
+                        alt="#ImgNotFound" style="height: 40px;">
+                </div>
+                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                    <div class="text-sm lg:flex-grow"></div>
+                    <div>
+                        <a href="https://school-tailwindcss.vercel.app/school.html"
+                            class="lg:inline-block mr-5 text-xl text-navbarText">Home</a>
+                        <a href="https://school-about.vercel.app/About.html"
+                            class="lg:inline-block mr-5 text-xl text-navbarText">About</a>
+                        <a href="https://school-contact.vercel.app/contact.html"
+                            class="lg:inline-block mr-5 text-xl text-navbarText">Contact</a>
+                        <a href="https://school-admission.vercel.app/Admission.html"
+                            class="lg:inline-block mr-5 text-xl text-navbarText">Admission</a>
+                        <a href="https://school-event.vercel.app/event.html"
+                            class="lg:inline-block mr-5 text-xl text-navbarText">Events</a>
+                        <a href="https://school-press.vercel.app/press.html"
+                            class="lg:inline-block mr-5 text-xl text-navbarText">News</a>
+                        <a href="https://school-gallery.vercel.app/gallery.html"
+                            class="lg:inline-block mr-10 text-xl text-navbarText">Gallery</a>
+                    </div>
+                </div>
+            </nav>
+            <nav
+                class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 lg:hidden flex">
+                <div class="container flex flex-wrap items-center justify-between mx-auto">
+                    <a href="https://school-tailwindcss.vercel.app/school.html" class="flex items-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuMdkg5uExhqnoTkIS1Tznf93WP0P2crfIJkN32wcmDDNWr6Is9eePJqtjBPinWwfH_c&usqp=CAU"
+                            class="h-10" alt="Logo">
+                    </a>
+                    <div class="flex lg:order-2 mr-5">
+                        <button data-collapse-toggle="navbar-sticky" type="button"
+                            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 "
+                            aria-controls="navbar-sticky" aria-expanded="false">
+                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+                        id="navbar-sticky">
+                        <ul
+                            class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
+                            <li>
+                                <a href="https://school-tailwindcss.vercel.app/school.html"
+                                    class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white"
+                                    aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="https://school-about.vercel.app/About.html"
+                                    class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                            </li>
+                            <li>
+                                <a href="https://school-contact.vercel.app/contact.html"
+                                    class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                            </li>
+                            <li>
+                                <a href="https://school-admission.vercel.app/Admission.html"
+                                    class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Admission</a>
+                            </li>
+                            <li>
+                                <a href="https://school-event.vercel.app/event.html"
+                                    class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Events</a>
+                            </li>
+                            <li>
+                                <a href="https://school-press.vercel.app/press.html"
+                                    class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">News</a>
+                            </li>
+                            <li>
+                                <a href="https://school-gallery.vercel.app/gallery.html"
+                                    class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+        </div>
+    </div>
+    <div class="lg:pt-16"></div>
+
+    <div class="bgImage bg-green">
+        <img src="https://marketing-assets-cms.hubstaff.com/public/images/utils/hubstaff-double-spoke.svg"
+            alt="#ImgNotFound" style="width: 100%;">
+    </div>
+    <div style="background: #F8F4F1;">
+        <div class="sm:pb-60 pb-48 bg-green px-3 pt-24">
+            <div style="max-width: 950px; margin: auto; text-align: center;">
+                <h1 class="text-xl mt-10 mb-5 text-white">
+                    <b class="px-3 text-4xl">SUPPORTING TAILWIND CSS EDUCATION FOR EVERY CHILD IN NEW YORK
+                        CITY</b>
+                    <br>
+                    <br>
+                    <span>
+                        Tailwindcss School NYC’s mission is to support tailwindcss education for every child in New York
+                        City. We partner with New York City public schools to cultivate healthy students and communities
+                        through
+                        hands-on cooking and gardening education, transforming children’s relationship with food.
+                    </span>
+                </h1>
+                <a href="https://school-event.vercel.app/event.html" class="block bg-white text-black text-lg p-3"
+                    style="margin: auto; max-width: 350px; margin-top: 20px;">
+                    <b>2021-2022 School Year Achievements</b>
+                </a>
+                <div class="grid md:grid-rows-1 md:grid-flow-col gap-2"
+                    style="margin: auto; max-width: 350px; margin-top: 20px;">
+                    <button type="button" class="btn openPositionBtn px-3 py-2"><b>Our Program</b></button>
+                    <button type="button" class="btn salesBtn px-3 py-2"><b>Get Involved</b></button>
+                </div>
+            </div>
+        </div>
+        <div
+            style="width: 100%; height: 150px; border-top-left-radius: 100%; border-top-right-radius: 100%; margin-top: -8vh; background: #F8F4F1;">
+        </div>
+        <div class="px-3 curveImg">
+            <div class="container" style="max-width: 950px; margin: auto; text-align: center; margin-top: -20vh;">
+                <img src="https://img.staticmb.com/mbcontent/images/uploads/2021/8/schools-entrance.jpg"
+                    alt="#ImgNotFound" style="width: 90%; margin-left: 5%;">
+                <div class="top-left md:flex hidden"><img
+                        src="https://marketing-assets-cms.hubstaff.com/public/images/utils/branding-white-dots-6x6.svg"
+                        alt="#ImgNotFound" style="width: 95px; height: 95px; margin-top: -50px; clip-path: polygon(0% 0%,51% 0%,100% 0%,100% 47%,32% 47%,33% 100%,0% 100%);"></div>
+            </div>
+
+            <h1 class="text-center text-4xl mt-20 mb-5"><b>GET INVOLVED</b></h1>
+
+            <div class="grid grid-rows-2 grid-flow-col gap-4" style="margin: auto; max-width: 1200px;">
+                <div class="md:flex hidden justify-center">
+                    <div class="block max-w-sm bg-white shadow-lg dark:bg-neutral-700">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/Fill-1.png"
+                            alt="#ImgNotFound" class="h-30 w-30"
+                            style="max-width: 100px; margin: auto; margin-top: 150px;" />
+                        <div class="px-20 text-center"><b>Help us grow the next generation of healthy children.</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex hidden justify-center">
+                    <div class="block max-w-sm bg-green shadow-lg dark:bg-neutral-700">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296384652265883-e1537396717258.jpg"
+                            alt="#ImgNotFound" class="h-80 w-full" />
+                        <div style="width: 100%; height: 30px; border-top-left-radius: 30%; border-top-right-radius: 30%; margin-top: -30px; position: relative;"
+                            class="bg-green"></div>
+                        <div class="px-6 pb-6">
+                            <h5 class="mb-2 text-xl font-medium text-white">
+                                Share & Advocate
+                            </h5>
+                            <p class="mb-4 text-base text-white">
+                                Looking for logos and fact sheets? Interested in sharing some of our amazing
+                                stories?
+                            </p>
+                            <button type="button" class="bg-green border px-4 py-1 text-white">
+                                Download Media Kit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex hidden justify-center">
+                    <div class="block max-w-sm bg-green shadow-lg dark:bg-neutral-700">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296378700048743.jpg"
+                            alt="#ImgNotFound" class="h-80 w-full" />
+                        <div style="width: 100%; height: 30px; border-top-left-radius: 30%; border-top-right-radius: 30%; margin-top: -30px; position: relative;"
+                            class="bg-green"></div>
+                        <div class="px-6 pb-6">
+                            <h5 class="mb-2 text-xl font-medium text-white">
+                                Give to Help Us Grow
+                            </h5>
+                            <p class="mb-4 text-base text-white">
+                                Your support means that more New York City public school kids can thrive. Thank you
+                                for
+                                your
+                                generosity!
+                            </p>
+                            <button type="button" class="bg-green border px-4 py-1 text-white">
+                                Donate Here
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex hidden justify-center">
+                    <div class="block max-w-sm bg-green shadow-lg dark:bg-neutral-700">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296398883240364-e1537395278359.jpg"
+                            alt="#ImgNotFound" class="h-80 w-full" />
+                        <div style="width: 100%; height: 30px; border-top-left-radius: 30%; border-top-right-radius: 30%; margin-top: -30px; position: relative;"
+                            class="bg-green"></div>
+                        <div class="px-6 pb-6">
+                            <h5 class="mb-2 text-xl font-medium text-white">
+                                Pledge Your Birthday
+                            </h5>
+                            <p class="mb-4 text-base text-white">
+                                This year, ask for gifts that keep on giving. Donations that bring hands-on
+                                gardening
+                                and
+                                cooking education to public schools of NYC.
+                            </p>
+                            <button type="button" class="bg-green border px-4 py-1 text-white">
+                                Donate Here
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex hidden justify-center">
+                    <div class="block max-w-sm bg-green shadow-lg dark:bg-neutral-700">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/www.edibleschoolyardnyc.org-8296190409527959.jpg"
+                            alt="#ImgNotFound" class="h-80 w-full" />
+                        <div style="width: 100%; height: 30px; border-top-left-radius: 30%; border-top-right-radius: 30%; margin-top: -30px; position: relative;"
+                            class="bg-green"></div>
+                        <div class="px-6 pb-6">
+                            <h5 class="mb-2 text-xl font-medium text-white">
+                                Become A Volunteer
+                            </h5>
+                            <p class="mb-4 text-base text-white">
+                                We offer a range of fun, hands-on volunteer opportunities to suit your interests and
+                                your
+                                schedule.
+                            </p>
+                            <button type="button" class="bg-green border px-4 py-1 text-white">
+                                Volunteer Here
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex hidden justify-center">
+                    <div class="block max-w-sm bg-green shadow-lg dark:bg-neutral-700">
+                        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296419667694082-e1537396619514.jpg"
+                            alt="#ImgNotFound" class="h-80 w-full" />
+                        <div style="width: 100%; height: 30px; border-top-left-radius: 30%; border-top-right-radius: 30%; margin-top: -30px; position: relative;"
+                            class="bg-green"></div>
+                        <div class="px-6 pb-6">
+                            <h5 class="mb-2 text-xl font-medium text-white">
+                                Come See Us in Action
+                            </h5>
+                            <p class="mb-4 text-base text-white">
+                                Make an appointment to tour an Tailwindcss School NYC garden and kitchen classroom.
+                            </p>
+                            <button type="button" class="bg-green border px-4 py-1 text-white">
+                                Visit Us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:hidden flex justify-center justify-center items-center mt-3"
+                style="background-image: url(https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296378700048743.jpg); width: 100%; background-position:center; background-repeat: no-repeat; background-size: cover;">
+                <div class="text-white text-xl max-w-2xl text-center tracking-widest py-20">
+                    <b>Give To Help Us Grow</b><br>
+                </div>
+            </div>
+
+            <div class="md:hidden flex justify-center justify-center items-center mt-3"
+                style="background-image: url(https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/www.edibleschoolyardnyc.org-8296190409527959.jpg); width: 100%; background-position:center; background-repeat: no-repeat; background-size: cover;">
+                <div class="text-white text-xl max-w-2xl text-center tracking-widest py-20">
+                    <b>Become A Volunteer</b><br>
+                </div>
+            </div>
+
+            <div class="md:hidden flex justify-center justify-center items-center mt-3"
+                style="background-image: url(https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296384652265883-e1537396717258.jpg); width: 100%; background-position:center; background-repeat: no-repeat; background-size: cover;">
+                <div class="text-white text-xl max-w-2xl text-center tracking-widest py-20">
+                    <b>Share & Advocate</b><br>
+                </div>
+            </div>
+
+            <div class="md:hidden flex justify-center justify-center items-center mt-3"
+                style="background-image: url(https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296398883240364-e1537395278359.jpg); width: 100%; background-position:center; background-repeat: no-repeat; background-size: cover;">
+                <div class="text-white text-xl max-w-2xl text-center tracking-widest py-20">
+                    <b>Pledge Your Birthday</b><br>
+                </div>
+            </div>
+
+            <div class="md:hidden flex justify-center justify-center items-center mt-3"
+                style="background-image: url(https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/scontent-lga3-1.cdninstagram.com-8296419667694082-e1537396619514.jpg); width: 100%; background-position:center; background-repeat: no-repeat; background-size: cover;">
+                <div class="text-white text-xl max-w-2xl text-center tracking-widest py-20">
+                    <b>Come See Us in Action</b><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-center text-4xl mt-20 mb-5"><b>GET IMPACT</b></h1>
+    <div class="grid grid-rows-1 sm:grid-flow-col gap-24 justify-center items-center px-3"
+        style="margin: auto; max-width: 1200px;">
+        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/impact-stat3.jpg" class="sm:mt-20"
+            alt="#ImgNotFound">
+        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/impact-stat1.jpg" class="sm:mt-20"
+            alt="#ImgNotFound">
+        <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2015/12/impact-stat2.jpg" class="sm:mt-20"
+            alt="#ImgNotFound">
+    </div>
+    <h1 class="text-center text-3xl mt-20 mb-5">
+        <a href="#Learn" class="text-sm"><u><b>LEARN MORE ABOUT OUR IMPACT</b></u></a>
+    </h1>
+
+
+    <div class="flex justify-center items-center"
+        style="background-image: url(https://www.edibleschoolyardnyc.org/wp-content/uploads/2017/07/IMG_6461.jpg); height:60vh; width: 100%; background-position:center; background-repeat: no-repeat; background-size: cover;">
+        <div class="text-center tracking-widest px-5">
+            <div class="max-w-2xl p-6 bg-white py-3">
+                <img src="https://www.edibleschoolyardnyc.org/wp-content/uploads/2018/09/Page-1.png" alt="#ImgNotFound"
+                    style="max-width: 100px; margin: auto;">
+                <span class="text-2xl">"So many problems are tied together, and they could all be solved by having a
+                    school garden."</span>
+                <br><br>
+                <span>Fifth grader at P.S. 216 Arturo Toscanini, Gravesend, Brooklyn</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-center items-center py-20" style="background: #F8F4F1;">
+        <div class="text-center tracking-widest px-3">
+            <h1 class="text-xl"><b>FROM THE SCHOOLYARD</b></h1>
+            <h1 class="pb-10">@esynyc</h1>
+            <a href="#follow" class="text-sm"><u><b>FOLLOW US ON INSTAGRAM</b></u></a>
+        </div>
+    </div>
+
+
+    <div id="accordionFlushExample" style="max-width: 950px; margin: auto; margin-top: 20px; margin-bottom: 100px;">
+        <h1 class="text-xl text-center mt-12"><b>YOUR QUESTIONS, ANSWERED</b></h1>
+        <h1 class="md:text-5xl text-4xl text-center mt-3"><b>Frequently asked questions</b></h1>
+
+        <div
+            class="rounded-none border border-l-0 border-r-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800 mt-8">
+            <h2 class="mb-0" id="flush-headingOne">
+                <button
+                    class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                    type="button" data-te-collapse-init data-te-collapse-collapsed data-te-target="#flush-collapseOne"
+                    aria-expanded="false" aria-controls="flush-collapseOne">
+                    Are children at lower risk of COVID-19 than adults?
+                    <span
+                        class="ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="!visible hidden border-0" data-te-collapse-item
+                aria-labelledby="flush-headingOne" data-te-parent="#accordionFlushExample">
+                <div class="py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the
+                    <code>.accordion-flush</code> class. This is the second item's
+                    accordion body. Let's imagine this being filled with some actual
+                    content.
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+            <h2 class="mb-0" id="flush-headingTwo">
+                <button
+                    class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                    type="button" data-te-collapse-init data-te-collapse-collapsed data-te-target="#flush-collapseTwo"
+                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                    What is the role of children in transmission?
+                    <span
+                        class="ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="!visible hidden border-0" data-te-collapse-item
+                aria-labelledby="flush-headingTwo" data-te-parent="#accordionFlushExample">
+                <div class="py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the
+                    <code>.accordion-flush</code> class. This is the second item's
+                    accordion body. Let's imagine this being filled with some actual
+                    content.
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+            <h2 class="mb-0" id="flush-headingThree">
+                <button
+                    class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                    type="button" data-te-collapse-init data-te-collapse-collapsed data-te-target="#flush-collapseThree"
+                    aria-expanded="false" aria-controls="flush-collapseThree">
+                    What benefits would school re-opening provide?
+                    <span
+                        class="ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="!visible hidden" data-te-collapse-item
+                aria-labelledby="flush-headingThree" data-te-parent="#accordionFlushExample">
+                <div class="py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the
+                    <code>.accordion-flush</code> class. This is the third item's
+                    accordion body. Nothing more exciting happening here in terms of
+                    content, but just filling up the space to make it look, at least
+                    at first glance, a bit more representative of how this would look
+                    in a real-world application.
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+            <h2 class="mb-0" id="flush-headingFour">
+                <button
+                    class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                    type="button" data-te-collapse-init data-te-collapse-collapsed data-te-target="#flush-collapseFour"
+                    aria-expanded="false" aria-controls="flush-collapseFour">
+                    Checklist for students and children
+                    <span
+                        class="ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="!visible hidden" data-te-collapse-item
+                aria-labelledby="flush-headingFour" data-te-parent="#accordionFlushExample">
+                <div class="py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the
+                    <code>.accordion-flush</code> class. This is the third item's
+                    accordion body. Nothing more exciting happening here in terms of
+                    content, but just filling up the space to make it look, at least
+                    at first glance, a bit more representative of how this would look
+                    in a real-world application.
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
+            <h2 class="mb-0" id="flush-headingFive">
+                <button
+                    class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                    type="button" data-te-collapse-init data-te-collapse-collapsed data-te-target="#flush-collapseFive"
+                    aria-expanded="false" aria-controls="flush-collapseFive">
+                    What should be monitored after re-opening of school?
+                    <span
+                        class="ml-auto -mr-1 h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="!visible hidden" data-te-collapse-item
+                aria-labelledby="flush-headingFive" data-te-parent="#accordionFlushExample">
+                <div class="py-4 px-5">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the
+                    <code>.accordion-flush</code> class. This is the third item's
+                    accordion body. Nothing more exciting happening here in terms of
+                    content, but just filling up the space to make it look, at least
+                    at first glance, a bit more representative of how this would look
+                    in a real-world application.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="text-center tracking-widest px-3 py-20">
+        <h1 class="text-xl"><b>JOIN OUR MAILING LIST</b></h1>
+        <p class="text-base py-4"><b>Sign up to receive updates about our programs, events, workshops, and more.</b>
+        </p>
+        <div class="grid lg:grid-rows-1 grid-rows-2 sm:grid-flow-col gap-4 justify-center items-center px-3">
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-first-name">
+                    First Name
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-first-name" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-last-name">
+                    Last Name
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-last-name" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-email">
+                    Email
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-email" type="text">
+            </div>
+            <div>
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-left"
+                    for="grid-zip-code">
+                    Zip Code
+                </label>
+                <input
+                    class="block w-full border border-gray-500 py-1 px-2 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-zip-code" type="text">
+            </div>
+        </div>
+        <button type="button"
+            class="bg-black sm:hover:bg-green text-white sm:hover:text-black px-4 py-2 mt-5">SUBSCRIBE</button>
+    </div>
+
+    <div class="text-center tracking-widest px-3 py-5">
+        <div class="grid md:grid-rows-1 md:grid-flow-col gap-4 justify-center items-center px-3">
+            <a href="#contact" class="text-base"><b>CONTACT US</b></a>
+            <a href="#more" class="text-base"><b>COME SEE US</b></a>
+            <a href="#press" class="text-base"><b>PRESS</b></a>
+            <a href="#careers" class="text-base"><b>CAREERS</b></a>
+            <b>
+                <a href="#fb" class="text-base"><i class="fa fa-facebook-f px-2"></i></a>
+                <a href="#twitter" class="text-base"><i class="fa fa-twitter px-2"></i></a>
+                <a href="#insta" class="text-base"><i class="fa fa-instagram px-2"></i></a>
+            </b>
+        </div>
+        <p class="text-sm text-gray-500 mt-5">
+            © Copyright 2019 Tailwindcss School NYC. All rights reserved.
+            <a href="#terms" class="underline">Terms of Use</a> and
+            <a href="#policy" class="underline">Privacy Policy</a>.
+            <a href="#credit" class="underline">Site Credits.</a>
+        </p>
+    </div>
+
+
+</body>
+
+</html>
