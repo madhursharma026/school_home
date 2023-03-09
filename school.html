@@ -100,6 +100,21 @@
         top: 8px;
         left: 16px;
     }
+
+    @media (min-width: 768px) {
+        .imgWidth {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .imgWidth {
+            width: 70%;
+        }
+        .carouselImage{
+            margin-left: 15%;
+        }
+    }
 </style>
 
 <script>
@@ -149,8 +164,7 @@
                     </div>
                 </div>
             </nav>
-            <nav
-                class="bg-white px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200 lg:hidden flex">
+            <nav class="bg-white px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200 lg:hidden flex">
                 <div class="container flex flex-wrap items-center justify-between mx-auto">
                     <a href="https://school-tailwindcss.vercel.app/school.html" class="flex items-center">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTuMdkg5uExhqnoTkIS1Tznf93WP0P2crfIJkN32wcmDDNWr6Is9eePJqtjBPinWwfH_c&usqp=CAU"
@@ -235,8 +249,12 @@
                 </a>
                 <div class="grid md:grid-rows-1 md:grid-flow-col gap-2"
                     style="margin: auto; max-width: 350px; margin-top: 20px;">
-                    <button type="button" class="btn openPositionBtn px-3 py-2"><b>Our Program</b></button>
-                    <button type="button" class="btn salesBtn px-3 py-2"><b>Get Involved</b></button>
+                    <!-- <button type="button" class="btn openPositionBtn px-3 py-2"><b>Our Program</b></button> -->
+                    <a class="btn openPositionBtn px-3 py-2" href="https://school-event.vercel.app/event.html"
+                        role="button"><b>Our Program</b></a>
+                    <!-- <button type="button" class="btn salesBtn px-3 py-2"><b>Get Involved</b></button> -->
+                    <a class="btn salesBtn px-3 py-2" href="https://school-admission.vercel.app/Admission.html"
+                        role="button"><b>Get Involved</b></a>
                 </div>
             </div>
         </div>
@@ -452,8 +470,7 @@
         <h1 class="text-xl text-center mt-12"><b>YOUR QUESTIONS, ANSWERED</b></h1>
         <h1 class="md:text-5xl text-4xl text-center mt-3"><b>Frequently asked questions</b></h1>
 
-        <div
-            class="rounded-none border border-l-0 border-r-0 border-neutral-200 bg-white mt-8">
+        <div class="rounded-none border border-l-0 border-r-0 border-neutral-200 bg-white mt-8">
             <h2 class="mb-0" id="flush-headingOne">
                 <button
                     class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
@@ -472,16 +489,17 @@
             <div id="flush-collapseOne" class="!visible hidden border-0" data-te-collapse-item
                 aria-labelledby="flush-headingOne" data-te-parent="#accordionFlushExample">
                 <div class="py-4 px-5">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the
-                    <code>.accordion-flush</code> class. This is the second item's
-                    accordion body. Let's imagine this being filled with some actual
-                    content.
+                    So far, data suggests that children under the age of 18 years represent about 8.5% of reported
+                    cases, with relatively few deaths compared to other age groups and usually mild disease. However,
+                    cases of critical illness have been reported. As with adults, pre-existing medical conditions have
+                    been suggested as a risk factor for severe disease and intensive care admission in children.
+                    <br><br>
+                    Further studies are underway to assess the risk of infection in children and to better understand
+                    transmission in this age group.
                 </div>
             </div>
         </div>
-        <div
-            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
+        <div class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
             <h2 class="mb-0" id="flush-headingTwo">
                 <button
                     class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
@@ -500,16 +518,26 @@
             <div id="flush-collapseTwo" class="!visible hidden border-0" data-te-collapse-item
                 aria-labelledby="flush-headingTwo" data-te-parent="#accordionFlushExample">
                 <div class="py-4 px-5">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the
-                    <code>.accordion-flush</code> class. This is the second item's
-                    accordion body. Let's imagine this being filled with some actual
-                    content.
+                    The role of children in transmission is not yet fully understood. To date, few outbreaks involving
+                    children or schools have been reported. However, the small number of outbreaks reported among
+                    teaching or associated staff to date suggests that spread of COVID-19 within educational settings
+                    may be limited.
+                    <br><br>
+                    As children generally have milder illness and fewer symptoms, cases may sometimes go unnoticed.
+                    Importantly, early data from studies suggest that infection rates among teenagers may be higher than
+                    in younger children.
+                    <br><br>
+                    Considering that many countries are starting to slowly lift restrictions on activities, the
+                    longer-term effects of keeping schools open on community transmission are yet to be evaluated. Some
+                    modelling studies suggest that school re-opening might have a small effect on wider transmission in
+                    the community, but this is not well understood. Further studies are underway on the role of children
+                    in transmission in and outside of educational settings. WHO is collaborating with scientists around
+                    the world to develop protocols that countries can use to study COVID-19 transmission in educational
+                    institutions. Click here to access this information.
                 </div>
             </div>
         </div>
-        <div
-            class="rounded-none border border-l-0 border-r-0 border-t-0 border-t-0 border-neutral-200 bg-white">
+        <div class="rounded-none border border-l-0 border-r-0 border-t-0 border-t-0 border-neutral-200 bg-white">
             <h2 class="mb-0" id="flush-headingThree">
                 <button
                     class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
@@ -528,18 +556,22 @@
             <div id="flush-collapseThree" class="!visible hidden" data-te-collapse-item
                 aria-labelledby="flush-headingThree" data-te-parent="#accordionFlushExample">
                 <div class="py-4 px-5">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the
-                    <code>.accordion-flush</code> class. This is the third item's
-                    accordion body. Nothing more exciting happening here in terms of
-                    content, but just filling up the space to make it look, at least
-                    at first glance, a bit more representative of how this would look
-                    in a real-world application.
+                    School closures have clear negative impacts on child health, education and development, family
+                    income and the overall economy.
+                    <br><br>
+                    The decision to reopen schools should include consideration of the following benefits:
+                    <br><br>
+                    <li>Allowing students to complete their studies and continue to the next level</li>
+                    <li>Essential services, access to nutrition, child welfare, such as preventing violence against
+                        children</li>
+                    <li>Social and psychological well-being</li>
+                    <li>Access to reliable information on how to keep themselves and others safe</li>
+                    <li>Reducing the risk of non-return to school</li>
+                    <li>Benefit to society, such as allowing parents to work</li>
                 </div>
             </div>
         </div>
-        <div
-            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
+        <div class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
             <h2 class="mb-0" id="flush-headingFour">
                 <button
                     class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
@@ -558,18 +590,35 @@
             <div id="flush-collapseFour" class="!visible hidden" data-te-collapse-item
                 aria-labelledby="flush-headingFour" data-te-parent="#accordionFlushExample">
                 <div class="py-4 px-5">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the
-                    <code>.accordion-flush</code> class. This is the third item's
-                    accordion body. Nothing more exciting happening here in terms of
-                    content, but just filling up the space to make it look, at least
-                    at first glance, a bit more representative of how this would look
-                    in a real-world application.
+                    <li>In a situation like this it is normal to feel sad, worried, confused, scared or angry. Know that
+                        you
+                        are not alone and talk to someone you trust, like your parent or teacher so that you can help
+                        keep
+                        yourself and your school safe and healthy.
+                        Ask questions, educate yourself and get information from reliable sources.</li>
+                    <br><br>
+                    <li>Protect yourself and others:
+                        Wash your hands frequently, always with soap and water for at least 20 seconds.
+                        Remember to not touch your face, eyes, nose and mouth.
+                        Do not share cups, eating utensils, food or drinks with others.</li>
+                    <br><br>
+                    <li>Be a leader in keeping yourself, your school, family and community healthy.
+                        Share what you learn about preventing disease with your family and friends, especially with
+                        younger
+                        children
+                        Model good practices such as sneezing or coughing into your elbow and washing your hands,
+                        especially
+                        for younger family members.</li>
+                    <br><br>
+                    <li>Don’t stigmatize your peers or tease anyone about being sick; remember that the virus doesn’t
+                        follow
+                        geographical boundaries, ethnicities, age or ability or gender.
+                        Tell your parents, another family member, or a caregiver if you feel sick, and ask to stay home.
+                    </li>
                 </div>
             </div>
         </div>
-        <div
-            class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
+        <div class="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white">
             <h2 class="mb-0" id="flush-headingFive">
                 <button
                     class="group faqsHoverEffect font-bold relative flex w-full items-center rounded-none border-0 bg-white py-8 px-5 text-left text-2xl text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)]"
@@ -588,16 +637,85 @@
             <div id="flush-collapseFive" class="!visible hidden" data-te-collapse-item
                 aria-labelledby="flush-headingFive" data-te-parent="#accordionFlushExample">
                 <div class="py-4 px-5">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the
-                    <code>.accordion-flush</code> class. This is the third item's
-                    accordion body. Nothing more exciting happening here in terms of
-                    content, but just filling up the space to make it look, at least
-                    at first glance, a bit more representative of how this would look
-                    in a real-world application.
+                    Yes, ensure adequate ventilation and increase total airflow supply to occupied spaces, if possible.
+                    Clean, natural ventilation (i.e., opening windows) should be used inside buildings where possible,
+                    without re-circulating the air. If heating, ventilation and air conditioning systems are used they
+                    should be regularly inspected, maintained and cleaned. Rigorous standards for installation,
+                    maintenance and filtration are essential to make sure they are effective and safe. Consider running
+                    the systems at maximum outside airflow for two hours before and after times when the building is
+                    occupied, according to the manufacturer’s recommendations.
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="carouselExampleControls" class="relative max-w-6xl m-auto" data-te-carousel-init data-te-carousel-slide>
+        <h1 class="md:text-5xl text-4xl text-center my-10"><b>Testimonial</b></h1>
+        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+            <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item data-te-carousel-active>
+                <div class="flex flex-wrap mb-6 md:px-24 px-5">
+                    <div class="w-full md:w-1/2 lg:md:w-1/3 px-3 mb-6 md:mb-0 carouselImage">
+                        <img src="https://a.storyblok.com/f/172398/97ac563750/01_codyrogers.png" alt="#ImgNotFound"
+                            class="imgWidth" />
+                    </div>
+                    <div class="w-full md:w-1/2 lg:md:w-1/2 px-3">
+                        <p class="text-xl">But most of all thank you for loving my children like they were your own. There is no other school in the world that would do that. Thank you just doesn’t seem adequate! With love and heartfelt appreciation.”                        </p>
+                        <h6 class="lg:mt-10"><b>Middle School Parent, 2020</b></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item>
+                <div class="flex flex-wrap mb-6 md:px-24 px-5">
+                    <div class="w-full md:w-1/2 lg:md:w-1/3 px-3 mb-6 md:mb-0 carouselImage">
+                        <img src="https://a.storyblok.com/f/172398/cd4912193d/02_j-barjum-x2.png" alt="#ImgNotFound"
+                            class="imgWidth" />
+                    </div>
+                    <div class="w-full md:w-1/2 lg:md:w-1/2 px-3">
+                        <p class="text-xl">“The warm, nurturing and academic environment has transformed our daughter into an avid and successful learner. The school has exceeded our expectations in developing the whole child.”</p>
+                        <h6 class="lg:mt-10"><b>Lower School Parent, 2016</b></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item>
+                <div class="flex flex-wrap mb-6 md:px-24 px-5">
+                    <div class="w-full md:w-1/2 lg:md:w-1/3 px-3 mb-6 md:mb-0 carouselImage">
+                        <img src="https://a.storyblok.com/f/172398/3cd63e210e/04_jeantioco-1.png" alt="#ImgNotFound"
+                            class="imgWidth" />
+                    </div>
+                    <div class="w-full md:w-1/2 lg:md:w-1/2 px-3">
+                        <p class="text-xl">“Not only does Cambridge School meet our daughters’ needs academically, it provides them with opportunities for social growth through extra curricular activities making it a true school experience.</p>
+                        <h6 class="lg:mt-10"><b>Middle School Parent, 2016</b></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button
+            class="absolute top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button" data-te-target="#carouselExampleControls" data-te-slide="prev">
+            <span class="inline-block h-8 w-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-6 w-6 text-black">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </span>
+            <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+        </button>
+        <button
+            class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button" data-te-target="#carouselExampleControls" data-te-slide="next">
+            <span class="inline-block h-8 w-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-6 w-6 text-black">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </span>
+            <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+        </button>
     </div>
 
     <hr>
